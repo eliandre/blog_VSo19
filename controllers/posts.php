@@ -42,4 +42,9 @@ class posts extends Controller
 
 
     }
+
+    function view(){
+        $post_id = $this -> params[0]; //get the post id from url for example http://localhost/blog_VSo19/posts/2 - post_id is 2
+        $this -> post = get_first('SELECT * FROM post NATURAL JOIN users WHERE post_id='.$post_id);
+    }
 }

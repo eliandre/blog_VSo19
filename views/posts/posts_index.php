@@ -4,7 +4,7 @@
 <!------ Include the above in your HEAD tag ---------->
 <?php foreach ($posts as $post):?>
 <div class="span8">
-    <h1><?php echo $post['post_subject']?></h1>
+    <a href="<?php echo BASE_URL;?>posts/view/<?php echo $post['post_id'];?>"><h1><?php echo $post['post_subject']?></h1></a>
     <p><?php echo $post['post_text']?></p>
     <div>
         <span class="badge badge-success">Posted <?php echo $post['post_created']?></span>
