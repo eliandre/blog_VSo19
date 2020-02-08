@@ -64,12 +64,9 @@
             <hr>
             <p>Posted on <?php echo $post['post_created']; ?></p>
             <p>Tags:
-            <div class="pull-right">
-                <span class="label">alice</span>
-                <span class="label">story</span>
-                <span class="label">blog</span>
-                <span class="label">personal</span>
-            </div>
+            <?php foreach ($tags as $tag): ?>
+                <span class="badge badge-primary"><?php echo $tag['tag_name'];?></span>
+            <?php endforeach; ?>
             </p>
             <hr>
             <p><?php echo $post['post_text'];?></p>
