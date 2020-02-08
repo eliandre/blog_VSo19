@@ -8,11 +8,10 @@
     <p><?php echo $post['post_text']?></p>
     <div>
         <span class="badge badge-success">Posted <?php echo $post['post_created']?></span>
-        <div class="pull-right">
-            <span class="label">alice</span>
-            <span class="label">story</span>
-            <span class="label">blog</span>
-            <span class="label">personal</span>
+        <div class="pull-right">Tags:
+            <?php foreach ($tags[$post['post_id']] as $tag):?>
+                <span class="badge badge-primary"><?php echo $tag?></span>
+            <?php endforeach;?>
         </div>
     </div>
     <hr>

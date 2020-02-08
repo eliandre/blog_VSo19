@@ -41,7 +41,7 @@
 <body>
 
 <!-- Fixed navbar -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -53,8 +53,10 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li <?= $controller == 'posts' ? 'class="active"' : '' ?>><a href="#">Home</a></li>
-                <li <?= $controller == 'halo' ? 'class="active"' : '' ?>><a href="halo">Halo admin</a></li>
+                <li class="nav-item <?= $controller == 'posts' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo BASE_URL;?>">Posts</a></li>
+                <li class="nav-item <?= $controller == 'tags' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo BASE_URL;?>">Tags</a></li>
+                <li class="nav-item <?= $controller == 'users' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo BASE_URL;?>">Users</a></li>
+                <li class="nav-item <?= $controller == 'halo' ? 'active' : '' ?>"><a href="halo">Halo admin</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sample dropdown <b class="caret"></b></a>
                     <ul class="dropdown-menu">
