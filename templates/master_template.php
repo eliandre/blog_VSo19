@@ -18,9 +18,9 @@
 
     <!-- Site core CSS -->
     <link href="assets/css/main.css?<?=COMMIT_HASH?>" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <!--<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
 
     <style>
         body {
@@ -51,12 +51,12 @@
             <li class="nav-item <?= $controller == 'posts' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo BASE_URL;?>">Posts</a></li>
             <li class="nav-item <?= $controller == 'tags' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo BASE_URL;?>">Tags</a></li>
             <li class="nav-item <?= $controller == 'users' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo BASE_URL;?>">Users</a></li>
-            <li class="nav-item <?= $controller == 'halo' ? 'active' : '' ?>"><a class="nav-link" href="<?php echo BASE_URL;?>">Halo admin</a></li>
+            <li class="nav-item <?= $controller == 'halo' ? 'active' : '' ?>"><a class="nav-link" href="halo">Halo admin</a></li>
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"><?= $_SESSION['language'] ?></a>
-                <a class="dropdown-menu">
+                <div class="dropdown-menu">
                     <?php foreach ($supported_languages as $language): ?>
-                    <a href="<?= $controller ?>?language=<?= $language ?>"
+                        <a href="<?= $controller ?>?language=<?= $language ?>"
                        class="<?= $language == $_SESSION['language'] ? 'active' : '' ?>"><?= $language ?></a>
                     <?php endforeach ?>
                 </div>
