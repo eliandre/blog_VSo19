@@ -13,7 +13,7 @@ class posts extends Controller
     {
 
         $this->posts = get_all("SELECT * FROM post");
-        $_tags = get_all("SELECT * FROM post_tags NATURAL JOIN tag");
+        $_tags = get_all('SELECT * FROM post_tags NATURAL JOIN tag');
         foreach ($_tags as $tag){
             $this -> tags[$tag['post_id']][] = $tag['tag_name'];
         }
